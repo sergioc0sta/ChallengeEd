@@ -1,0 +1,6 @@
+const server = require('./api/configs/server')
+require('./api/configs/database')
+const routeAuth = require('./api/routes/routesAuth')
+const route = require('./api/routes/routesFree')
+server.use('/apiauth', routeAuth)
+server.use('/api', route)
